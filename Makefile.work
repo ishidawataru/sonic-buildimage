@@ -63,9 +63,11 @@ OVERLAY_MODULE_CHECK := lsmod | grep "^overlay " > /dev/null 2>&1 || (echo "ERRO
 
 BUILD_TIMESTAMP := $(shell date +%Y%m%d\.%H%M%S)
 
+GIT_DIRECTORY := $(shell file .git | grep -q ASCII && awk '{split($$2, ary, ".git"); print ary[1]}' .git | xargs realpath || pwd )
+
 DOCKER_RUN := docker run --rm=true --privileged \
-    -v $(PWD):/sonic \
-    -w /sonic \
+    -v $(GIT_DIRECTORY):$(GIT_DIRECTORY) \
+    -w $(PWD) \
     -e "http_proxy=$(http_proxy)" \
     -e "https_proxy=$(https_proxy)" \
     -i$(if $(TERM),t,)
