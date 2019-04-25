@@ -18,7 +18,7 @@ SONIC_CONFIG_MAKE_JOBS = $(shell nproc)
 
 # SONIC_CONFIG_USE_NATIVE_DOCKERD_FOR_BUILD - use native dockerd for build.
 # If set to y SONiC build container will use native dockerd instead of dind for faster build
-# SONIC_CONFIG_USE_NATIVE_DOCKERD_FOR_BUILD = y
+SONIC_CONFIG_USE_NATIVE_DOCKERD_FOR_BUILD = y
 
 # SONIC_CONFIG_ENABLE_COLORS - enable colored output in build system.
 # Comment next line to disable:
@@ -28,7 +28,7 @@ SONIC_CONFIG_MAKE_JOBS = $(shell nproc)
 DEFAULT_USERNAME = admin
 
 # DEFAULT_PASSWORD - default password for installer build
-DEFAULT_PASSWORD = YourPaSsWoRd
+DEFAULT_PASSWORD = admin
 
 # ENABLE_DHCP_GRAPH_SERVICE - specify the source of minigraph to generate configuration file.
 # If set to y SONiC will get the minigraph from graph service. Graph service URL need to be
