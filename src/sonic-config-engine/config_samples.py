@@ -57,7 +57,8 @@ def generate_l2_config(data):
 _sample_generators = {
         't1': generate_t1_sample_config,
         'l2': generate_l2_config,
-        'empty': generate_empty_config
+        'empty': generate_empty_config,
+        'asis': lambda data : data
         }
 
 def get_available_config():
