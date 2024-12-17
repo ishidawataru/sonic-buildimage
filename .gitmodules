@@ -1,7 +1,6 @@
 [submodule "sonic-swss-common"]
 	path = src/sonic-swss-common
-	url = https://github.com/sonic-net/sonic-swss-common
-[submodule "sonic-linux-kernel"]
+	url = https://github.com/sonic-net/sonic-swss-common [submodule "sonic-linux-kernel"]
 	path = src/sonic-linux-kernel
 	url = https://github.com/sonic-net/sonic-linux-kernel
 [submodule "sonic-sairedis"]
@@ -136,3 +135,6 @@
 [submodule "platform/marvell-prestera/sonic-platform-marvell"]
 	path = platform/marvell-prestera/sonic-platform-marvell
 	url = https://github.com/Marvell-switching/sonic-platform-arm64.git
+[submodule "src/xcvr-emu"]
+	path = src/xcvr-emu
+	url = https://github.com/ishidawataru/xcvr-emu.git
